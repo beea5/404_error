@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/*all*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+/*all*/
+.desconto {
+  width: 100%;
+  height: 42px;
+  background-color: black;
+  font-family: "Jaldi", sans-serif;
+}
+
+.desconto p {
+  color: #ffffff;
+  text-align: center;
+}
+
+.navbar {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 10px;
+}
+
+#search-container {
+  border: none;
+  font-size: 17px;
+  padding: auto;
+}
+
+.navbar li {
+  margin: 10px;
+}
+
+.title {
+  font-family: "Chivo", sans-serif;
+  font-size: 27px;
+  color: #00aac9;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title hr {
+  margin-top: 10px;
+}
+

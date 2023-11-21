@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link rel="stylesheet" href="stylehome/home.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jaldi" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+      
+        <style>
+          #product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas com larguras iguais */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+#product-list li {
+    list-style: none; /* Remove marcadores de lista */
+    text-align: center; /* Alinhamento do texto no centro */
+}
+
+#product-list button {
+    display: block; /* Garante que o botão ocupa a largura total da li */
+    margin-top: 10px; /* Adiciona espaço entre o texto e o botão */
+}
+
+        </style>
+
+        <script>
+            function addToCart(productName) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(productName);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Produto adicionado ao carrinho!');
+                updateCartView();
+            }
+
+            function updateCartView() {
+                const cartItems = document.getElementById("cart-items");
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cartItems.innerHTML = '';
+                cart.forEach(item => {
+                    const cartItem = document.createElement("li");
+                    cartItem.textContent = item;
+                    cartItems.appendChild(cartItem);
+                });
+            }
+
+            function toggleSearch() {
+                var searchContainer = document.getElementById("search-container");
+                searchContainer.style.display = searchContainer.style.display === "block" ? "none" : "block";
+            }
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <script>
+                    function toggleSearch() {
+                        var searchContainer = document.getElementById("search-container");
+                        searchContainer.style.display = searchContainer.style.display === "block" ? "none" : "block";
+                    }
+                </script>
+            </head>
+            <body>
+                <header>
+                    <nav>
+                        <div class="desconto">
+                            <p>Free Delivery on Order Over R$100</p>
+                        </div>
+                        <div class="navbar">
+                            <li>
+                                <img src="imgs/procurar 2.png" alt="Ícone de Pesquisa" onclick="toggleSearch()" />
+                                <div id="search-container">
+                                    <form id="search-form" action="/seu_script_de_pesquisa.php" method="get">
+                                        <input type="text" id="search-input" name="q" placeholder="Pesquisar..." />
+                                        <button type="submit">Buscar</button>
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"> <img src="imgs/coracao 1.png" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="imgs/carrinho (1).png" alt="" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="imgs/conta 1.png" alt="" /></a>
+                            </li>
+                        </div>
+                        <!--navbar-->
+                    </nav>
+                </header>
+            </nav>
+        </header>
+
+        <section class="title">
+            <h1>Psycho</h1>
+            <hr />
+        </section>
+        
+        <section class="way">
+            <div class="categoria"> 
+                <li><a href="#">Femenino</a></li>
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Infantil</a></li>
+            </div>
+        </section>
+
+        <div class="carousel">
+           
+        <div class="carousel">
+            <div><img src="imgs/Frame 1.png" alt="Imagem 1" /></div>
+            <div><img src="imgs/Frame 2.png" alt="Imagem 2" /></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".carousel").slick();
+            });
+        </script>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".carousel").slick();
+            });
+        </script>
+
+<section class="like">
+    <p>Você também pode gostar</p>
+</section>
+<div class="meu-carrossel">
+    <div><img src="imgs/Rectangle 5 (2).png" alt="Imagem 1" /></div>
+    <div><img src="imgs/Rectangle 6 (2).png" alt="Imagem 2" /></div>
+    <div><img src="imgs/Rectangle 7.png" alt="Imagem 3" /></div>
+    <div><img src="imgs/Rectangle 8 (1).png" alt="Imagem 4" /></div>
+    <div><img src="imgs/Rectangle 6 (2).png" alt="Imagem 5" /></div>
+    <div><img src="imgs/Rectangle 5 (2).png" alt="Imagem 6" /></div>
+</div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".meu-carrossel").slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                });
+            });
+        </script>
+
+        <section class="femenina">
+            <div class="women">
+                <p>Women's section</p>
+                <p></p>
+            </div>
+
+            <h2>Produtos Disponíveis</h2>
+            <ul id="product-list">
+                <!-- Lista de produtos disponíveis -->
+                <li data-name="Air MAx 1 Premium Light Iron Ore" data-price="3500.00" data-image="imgs/Rectangle 17.png">Air MAx 1 Premium Light Iron Ore - R$3500.00 <button onclick="addToCart(this)">Adicionar ao Carrinho</button></li>
+                <li data-name="Nike Dunk Low Premium" data-price="3500.00" data-image="imgs/produto2.jpg">Nike Dunk Low Premium - R$3500.00 <button onclick="addToCart('Nike Dunk Low Premium', 'imgs/produto2.jpg')">Adicionar ao Carrinho</button></li>
+                <li data-name="NIKE AIR FORCE 1 '07 PRM" data-price="3500.00" data-image="imgs/Rectangle 17.png">NIKE AIR FORCE 1 '07 PRM - R$3500.00 <button onclick="addToCart('NIKE AIR FORCE 1 07 PRM', 'imgs/produto2.jpg')">Adicionar ao Carrinho</button></li>
+                <li data-name="Nike Air Force 1 Low 'Cream Vintage Green'" data-price="3500.00" data-image="imgs/produto2.jpg">Nike Air Force 1 Low 'Cream Vintage Green' - R$3500.00 <button onclick="addToCart('Nike Air Force 1 Low Cream Vintage Green', 'imgs/produto2.jpg')">Adicionar ao Carrinho</button></li>
+                <li data-name="Nike Air Max Plus Drift" data-price="3500.00" data-image="imgs/Rectangle 17.png">Nike Air Max Plus Drift - R$3500.00 <button onclick="addToCart('Nike Air Max Plus Drift', 'imgs/produto2.jpg')">Adicionar ao Carrinho</button></li>
+                <li data-name="AirMax 1 Medium Olive" data-price="3500.00" data-image="imgs/produto2.jpg">AirMax 1 Medium Olive- R$3500.00 <button onclick="addToCart('AirMax 1 Medium Olive', 'imgs/produto2.jpg')">Adicionar ao Carrinho</button></li>
+                <!-- Adicione mais produtos conforme necessário -->
+            </ul>
+            </div>
+            <script>
+                function addToCart(productName, productImage) {
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    cart.push({ name: productName, image: productImage });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(productName + " adicionado ao carrinho!");
+                }
+            </script>
+      
+    </body>
+</html>
